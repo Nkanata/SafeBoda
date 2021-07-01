@@ -1,19 +1,22 @@
-Adding  event 
-POST to http://$host/AddEvent.php
+# Adding  event 
 
-Sample data.
+## POST to http://$host/AddEvent.php
+
+### Sample data.
+```
 {
     "eventName": "Safaricom Open Day",
     "coordinates": "40.71727401 -74.00898606",
     "eventDate": "2021-7-31 18:00:00",
     "promoCodes": 10
 }
+```
 
-Generating promocodes
-POST to http://$host/AddPromoCodes.php
+## Generating promocodes
+## POST to http://$host/AddPromoCodes.php
 
-Sample Data
-
+### Sample Data
+```
 {
     "numberofpromocodes": 10,
     "event": "Safaricom Open Day",
@@ -22,46 +25,51 @@ Sample Data
     "expiry": "2021-07-30 23:28:34"
 
 }
+```
 
-Get All Promocodes
+## Get All Promocodes
 
-GET http://$host/PromoCodeOps.php?getall=TRUE
+### GET http://$host/PromoCodeOps.php?getall=TRUE
 
-Get all active promocodes
+## Get all active promocodes
 
-GET http://$host/PromoCodeOps.php?getactive=TRUE
+### GET http://$host/PromoCodeOps.php?getactive=TRUE
 
-Deactivate Promo Code
+## Deactivate Promo Code
 
-POST http://$host/PromoCodeOps.php
+### POST http://$host/PromoCodeOps.php
 
-sample Data 
+## sample Data 
 
+```
 {
     "deactivate": "true",
     "promocode": "c4e519"
 }
+```
 
-Configure Promo Code Radius
+### Configure Promo Code Radius
 
-POST to http://$host/ConfigureRadius.php
+### POST to http://$host/ConfigureRadius.php
 
-Sample Data 
-
-{
+### Sample Data 
+```
+ {
     "PromoCode" : "c4e519",
     "radius": 60
 }
+```
 
-Check Validity 
+## Check Validity 
 
-POST to http://$host/CheckValidity.php
+## POST to http://$host/CheckValidity.php
 
-SAmple Data
-
+### Sample Data
+```
 {
     "origin": "40.71727401 -74.00898606",
     "destination": "40.71727401 -74.10898606",
     "promo_code": "8b0a6f"
     
 }
+```
